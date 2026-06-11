@@ -1,0 +1,186 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+body {
+    background-color: #FFF8E7;
+}
+#section{
+display:none;
+}
+
+.col-6{
+    text-align:center;
+}
+.recipe-img{
+    width:100%;
+    max-width:120px;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:10px;
+    transition: transform 0.3s;
+}
+
+.recipe-img:hover{
+    transform: scale(1.05);
+}
+</style>
+<style>
+footer{
+    background-color:#2E7D32;
+    color:white;
+    padding:20px;
+}
+footer p{
+    font-size:14px;
+    margin:5px 0;
+}
+
+@media (max-width: 576px){
+    .display-4{
+        font-size:2rem;
+    }
+
+    .lead{
+        font-size:1rem;
+    }
+
+    #welcome{
+        text-align:center;
+  }
+}
+</style>
+
+<script>
+$(document).ready(function(){
+	$("#section").slideDown(1000);
+});
+
+
+$(document).ready(function(){
+
+    let user = localStorage.getItem("user");
+
+    if(user){
+        $("#welcome").text("Welcome to FlavorNest, " + user + " 👋");
+    }
+ $("#logoutBtn").click(function(){
+
+        localStorage.removeItem("user");
+
+        window.location.href = "login.html";
+
+    });
+});
+</script>
+</head>
+
+<body>
+	
+	<div class="container-fluid">
+	<header class="bg-success text-white text-center py-5">
+        <h1 class="display-4">🍽️FlavorNest</h1>
+        <p class="lead">Fresh Recipes • Healthy Choices • Happy Cooking</p>
+    	</header>
+
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+	<a class="navbar-brand">Recipe</a>
+	</nav><br>
+<div id="section">	
+
+<h5 id="welcome"></h5>
+<div class="text-center text-md-start mb-3">
+<button id="logoutBtn" class="btn btn-danger">Logout</button>
+</div>
+	<h5>Explore delicious recipes from different categories.</h5>
+<div class="container py-3">
+	<div class="row g-3">
+	<div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
+	<a href="legume.html">
+	<img src="33.jpg" class="img-fluid recipe-img">
+	</a>
+	<p class="mt-2">Legume-Based</p>
+	</div>
+	
+	<div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
+	<a href="juices.html">
+	<img src="2.jpg" class="img-fluid recipe-img">
+	</a>
+	<p class="mt-2">Juices</p>
+	</div>
+
+	<div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
+	<a href="dessert.html">
+	<img src="3.jpg" class="img-fluid recipe-img">
+	</a>
+	<p class="mt-2">Desserts</p>
+	</div>
+	
+	<div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
+	<a href="snack.html">
+	<img src="4.jpg" class="img-fluid recipe-img">	
+	</a>
+	<p class="mt-2">Snacks</p>
+	</div>
+
+	<div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
+	<a href="roti.html">
+	<img src="5.jpg" class="img-fluid recipe-img">
+	</a>
+	<p class="mt-2">Rotis</p>
+	</div>
+
+	<div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
+	<a href="sides.html">
+	<img src="6.jpg" class="img-fluid recipe-img">
+	</a>
+	<p class="mt-2">Sides</p>
+	</div>
+
+	<div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
+	<a href="basic.html">
+	<img src="7.jpg" class="img-fluid recipe-img">
+	</a>
+	<p class="mt-2">Basics</p>
+	</div>
+	
+	<div class="col-6 col-md-4 col-lg-3 mb-4 text-center">
+	<a href="sabzi.html">
+	<img src="8.jpg" class="img-fluid recipe-img">
+	</a>
+	<p class="mt-2">Sabzi</p>
+	</div>
+	</div>
+</div>
+</div>
+	<p>
+		<a href="#">Back To Top</a>
+	</p>
+
+<footer class="bg-success text-white text-center py-4 mt-5">
+       <h3>🍽️ FlavorNest</h3>
+
+    <p>Fresh Ingredients • Delicious Recipes • Happy Cooking</p>
+
+    <p>
+        "Cooking is an art, and every recipe is a masterpiece."
+    </p>
+
+    <hr class="w-50 mx-auto border-light">
+
+    <p>
+        📧 flavornest@gmail.com |
+        📞 +91 98965 43110
+    </p>
+
+    <p>&copy; 2026 FlavorNest. All Rights Reserved.</p>
+</footer>
+
+</div>
+</body>
+</html>
